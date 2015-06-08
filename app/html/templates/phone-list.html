@@ -1,0 +1,16 @@
+<form>
+
+    <input ng-model="query"> <!-- filtrado por cualquiera de los valores que coincidan con esta cadena de texto -->
+
+</form>
+
+<ul id="phone-list">
+
+    <li ng-repeat="phone in phones | filter: query">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+    </li>
+
+</ul>
+
+<p>Total number of phones: {{phones.length}}</p>
