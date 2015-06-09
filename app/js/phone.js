@@ -11,24 +11,36 @@
         };
     });
 
-    phone.controller('phoneListCtrl', ['$scope', function($scope)
+    phone.controller('phoneListCtrl', ['$scope', '$http', function($scope, $http)
     {
-        $scope.phones = phones;
+        $scope.defaultOrder = 'age';
+
+        $http.get('/data/phones.json').success(function(data)
+        {
+            $scope.phones = data;
+        });
     }]);
 
-    var phones = [
+    phone.controller('phoneDetailCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams)
+    {
+        $http.get('/data/phones.json').success(function(data)
         {
-            'name': 'Nexus S',
-            'snippet': 'Fast just got faster with Nexus S.'
-        },
-        {
-            'name': 'Motorola XOOM™ with Wi-Fi',
-            'snippet': 'The Next, Next Generation tablet.'
-        },
-        {
-            'name': 'MOTOROLA XOOM™',
-            'snippet': 'The Next, Next Generation tablet.'
-        }
-    ];
+            $scope.phone = null;
+
+            var phones = data;
+
+            var numPhones = phones.length;
+
+            for(var i = 0 ; i < numPhones && $scope.phone == null ; i++)
+            {
+                var currentPhone = phones[i];
+
+                if(currentPhone.id == $routeParams.phoneId)
+                {
+                    $scope.phone = currentPhone;
+                }
+            }
+        });
+    }]);
 
 })();

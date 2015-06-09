@@ -15,4 +15,10 @@ describe('Unit: PhoneModule', function()
     {
         expect(scope.phones.length).toEqual(3);
     });
+
+    it('la opción por defecto del selector de orden debe ser por nombre',
+    function()
+    {
+        expect(scope.defaultOrder).toEqual('age');
+    });
 });
