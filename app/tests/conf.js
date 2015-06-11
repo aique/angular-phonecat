@@ -18,6 +18,7 @@ module.exports = function(config) {
      '../../node_modules/chai/chai.js',
      '../vendor/angular/angular.js',
      '../vendor/angular-mocks/angular-mocks.js',
+     '../vendor/angular-route/angular-route.js',
      './**/*.js',
       '../js/**/*.js'
     ],

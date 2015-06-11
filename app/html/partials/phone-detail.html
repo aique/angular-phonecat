@@ -2,13 +2,40 @@
 
     <header>
 
-        <h1>Detalle del teléfono <span>{{phone.name}}</span></h1>
+        <h1>{{phone.name}}</h1>
 
-        <img ng-src="{{phone.imageUrl}}">
+        <p>{{phone.description}}</p>
 
-        <p>{{phone.snippet}}</p>
+        <ul class="phone-thumbs">
+            <li ng-repeat="img in phone.images">
+                <img ng-src="{{img}}">
+            </li>
+        </ul>
 
-        <p>Años desde su lanzamiento: {{phone.age}}</p>
+        <ul class="specs">
+
+            <li>
+
+                <span>Availability and Networks</span>
+
+                <dl>
+
+                    <dt>Infrared</dt>
+                    <dd>{{phone.connectivity.infrared | checkmark}}</dd> <!-- aplico el filtro personalizado definido en filters.js -->
+
+                    <dt>GPS</dt>
+                    <dd>{{phone.connectivity.gps | checkmark}}</dd> <!-- aplico el filtro personalizado definido en filters.js -->
+
+                </dl>
+
+            </li>
+
+                <span>Additional Features</span>
+                <dd>{{phone.additionalFeatures}}</dd>
+
+            </li>
+
+        </ul>
 
     </header>
 

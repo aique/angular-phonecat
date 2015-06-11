@@ -10,12 +10,6 @@ describe('Unit: PhoneModule', function()
         ctrl = $controller('phoneListCtrl',{ $scope: scope });
     }));
 
-    it('el número de teléfonos debe ser igual a 3',
-    function()
-    {
-        expect(scope.phones.length).toEqual(3);
-    });
-
     it('la opción por defecto del selector de orden debe ser por nombre',
     function()
     {

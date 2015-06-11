@@ -1,0 +1,24 @@
+{
+  "name": "Motorola XOOM™ with Wi-Fi",
+  "description": "Bla bla bla...",
+  "additionalFeatures": "Contour Display, Near Field Communications (NFC),...",
+  "android":
+  {
+    "os": "Android 2.3",
+    "ui": "Android"
+  },
+  "images":
+  [
+    "/img/phones/phone2.jpg"
+  ],
+  "storage":
+  {
+    "flash": "16384MB",
+    "ram": "512MB"
+  },
+  "connectivity":
+  {
+    "infrared": true,
+    "gps": true
+  }
+}

@@ -1,6 +1,6 @@
 (function()
 {
-    var app = angular.module('phonecat', ['ngRoute', 'phone']);
+    var app = angular.module('phonecat', ['ngRoute', 'phone']); // Se añaden los módulos externos
 
     app.controller('userInfoCtrl', ['$scope', function($scope)
     {
@@ -17,7 +17,7 @@
             {
                 templateUrl: '/html/partials/phone-gallery.html'
             }).
-            when('/phones/:phoneId',
+            when('/phones/:phoneSlug',
             {
                 templateUrl: '/html/partials/phone-detail.html',
                 controller: 'phoneDetailCtrl'

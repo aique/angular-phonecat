@@ -80,7 +80,7 @@ describe('Unit: PhoneListScenarios', function()
 
         browser.getLocationAbsUrl().then(function(url)
         {
-            expect(url).toBe('/phones/1');
+            expect(url).toBe('/phones/nexus-s');
         });
     });
 
