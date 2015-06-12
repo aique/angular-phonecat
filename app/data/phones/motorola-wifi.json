@@ -7,9 +7,10 @@
     "os": "Android 2.3",
     "ui": "Android"
   },
+  "mainImg": "/img/phones/motorola-wifi/1.jpg",
   "images":
   [
-    "/img/phones/phone2.jpg"
+    "/img/phones/motorola-wifi/1.jpg"
   ],
   "storage":
   {

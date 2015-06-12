@@ -7,9 +7,11 @@
     "os": "Android 2.3",
     "ui": "Android"
   },
+  "mainImg": "/img/phones/nexus-s/1.jpg",
   "images":
   [
-    "/img/phones/phone1.jpg"
+    "/img/phones/nexus-s/1.jpg",
+    "/img/phones/nexus-s/2.jpg"
   ],
   "storage":
   {

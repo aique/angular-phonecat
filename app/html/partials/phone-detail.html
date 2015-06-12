@@ -6,9 +6,11 @@
 
         <p>{{phone.description}}</p>
 
+        <img class="large-img" ng-src="{{mainImg}}">
+
         <ul class="phone-thumbs">
             <li ng-repeat="img in phone.images">
-                <img ng-src="{{img}}">
+                <img ng-src="{{img}}" ng-click="setMainImg(img)"> <!-- asociación de un evento al elemento -->
             </li>
         </ul>
 
