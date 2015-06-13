@@ -5,24 +5,34 @@
 
         <meta charset="utf-8">
 
-        <title>My HTML File</title>
+        <title>Phonecat</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
         <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/animations.css">
 
     </head>
 
     <body ng-controller="userInfoCtrl">
 
-        <ng-view></ng-view>
+        <div class="view-container">
+            <div ng-view class="view-frame"></div>
+        </div>
 
     </body>
 
+    <script src="/vendor/jquery/jquery.js"></script> <!-- necesaria para el módulo de animaciones, ha de incluirse antes de éste -->
+
     <script src="/vendor/angular/angular.js"></script>
-    <script src="/vendor/angular-route/angular-route.js"></script>
+    <script src="/vendor/angular-route/angular-route.js"></script> <!-- modulo necesario para realizar el enrutado de la vista -->
+    <script src="/vendor/angular-resource/angular-resource.js"></script> <!-- módulo necesario para crear los servicios personalizados -->
+    <script src="/vendor/angular-animate/angular-animate.js"></script> <!-- módulo necesario para las animaciones -->
 
     <script src="/js/app.js"></script>
     <script src="/js/phone.js"></script>
     <script src="/js/filters.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/animations.js"></script>
 
 </html>

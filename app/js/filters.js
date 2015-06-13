@@ -1,8 +1,8 @@
 (function()
 {
-    var filters = angular.module('filters', []);
+    var filters = angular.module('filters', []); // Los filtros se definen como un módulo más
 
-    filters.filter('checkmark', function() // Los filtros se definen como un módulo más
+    filters.filter('checkmark', function()
     {
         return function(input)
         {

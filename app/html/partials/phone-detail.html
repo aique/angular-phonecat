@@ -6,7 +6,14 @@
 
         <p>{{phone.description}}</p>
 
-        <img class="large-img" ng-src="{{mainImg}}">
+        <div class="phone-images">
+
+            <img ng-src="{{img}}"
+                 class="phone"
+                 ng-repeat="img in phone.images"
+                 ng-class="{active:mainImg==img}">
+
+        </div>
 
         <ul class="phone-thumbs">
             <li ng-repeat="img in phone.images">
