@@ -46,6 +46,8 @@
         {
             $scope.mainImg = img;
         }
+
+        // se pueden declarar funciones privadas, simplemente no añadiendo la función al scope
     }]);
 
     // Antigua versión del mismo controlador sin servicios personalizados, utilizando el servicio $http

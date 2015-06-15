@@ -14,7 +14,7 @@ describe('Unit: PhoneDetailScenarios', function()
     {
         expect(element(by.css('.large-img')).getAttribute('src')).toMatch(/img\/phones\/nexus-s\/1.jpg/);
     });
-    
+
     it('debe cambiar adecuadamente la imagen principal cuando se hace click en las imágenes de la galería', function()
     {
         element(by.css('.phone-thumbs li:nth-child(0) img')).click();
